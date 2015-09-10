@@ -6,8 +6,6 @@ You must have a Cloud Foundry organization on [Pivotal Web Services (PWS)](https
 to use this tutorial. Talk to a Pivotal employee at the Pivotal booth if you're
 interested in getting access to Spring Cloud Services.
 
-You will also need to have a [GitHub](https://github.com) account.
-
 ## PWS Setup
 
 Fortune Teller is a simple application that can be used to demonstrate the
