@@ -111,7 +111,10 @@ point the `config-service` instance to a configuration repository on GitHub.
   them to PWS by running the following:
 
   ```console
-  cf push -f manifest-apps.yml
+  cd ../fortune-teller-ui
+  cf push
+  cd ../fortune-teller-fortune-service
+  cf push
   ```
 
   It will take a few minutes for the Fortune Teller UI and Service to deploy.
