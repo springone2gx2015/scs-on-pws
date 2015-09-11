@@ -23,19 +23,12 @@ Spring Cloud Services BETA.
 
   ```console
   cf api api.run.pivotal.io
+  cf login
   cf target -o YOUR_SCS_ORG -s YOUR_SCS_SPACE
   ```
 
   Replace `YOUR_SCS_ORG` and `YOUR_SCS_SPACE` with the name of the PWS
   organization and space provided to you by a Pivotal employee.
-
-1. Login to PWS using your PWS credentials
-
-Enter the following in a terminal to login to PWS.
-
-```console
-cf login
-```
 
 1. Create the services Fortune Teller will need to run
 
