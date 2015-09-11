@@ -136,6 +136,21 @@ is not available. This may be because the future-service hasn't started or is
 still initializing. Once fortune-service is running, you will have the
 necessary clairvoyance to know what your future holds.
 
+##(Optional) Deploying Fortune Teller applications with STS
+
+1. Open “Boot Dashboard” view via Window -> Show View -> Others… find “Boot Dashboard”. Alternatively, locate and click “Boot Dashboard” button on the main toolbar to open “Boot Dashboard” view. ![GitHub Logo](/images/boot-dash-button.png) 
+2. The “Boot Dashboard” view opens up. It should have Fortune Teller applications listed under “Local” run target. 
+3. Click on the ‘+’ button in the “Boot Dashboard” view toolbar to Create a new Cloud Foundry connection pointing to the Organization and Space where Fortune Teller application services are about to be deployed. 
+4. Wizard page pops up prompting to fill in Cloud Foundry credentials and select a space. Ones info is filled in “Finish” button becomes enabled at the bottom. Click it when ready. 
+5. Cloud Foundry target should appear under the “Local” it should have Cloud Foundry Organization, Space, URL and possibly some apps under it. 
+6. Open (double-click) manifest.yml file under fortune-teller-fortune-service project in Package Explorer. YML editor for the file is opened. Comment out the line starting with “path” as IDE builds and packages services for deployment on CF by itself without help from Maven.  
+7. Perform the step above on manifest.yml file under fortune-teller-ui project.
+8. Multi-select fortune-teller-ui and fortune-teller-fortune-service under “Local” in the “Boot Dashboard” view. 
+9. Drag And Drop selected fortune-teller-ui and fortune-teller-fortune-service under “Local” onto the created Cloud Foundry target from step 5 above. Both applications should start being deployed on Cloud Foundry. 
+10. Wait until both apps are running on the Cloud Foundry 
+11. Double-click on the fortune-ui app under Cloud Foundry run target in the “Boot Dashboard” view. Browser should be opened (either Eclipse’s internal or external browser) showing the Fortune Teller application UI running. 
+
+
 ## Troubleshooting
 
 The Spring Cloud Service dashboards provide a lot of valuable information for
