@@ -1,6 +1,6 @@
 # Spring Cloud Services Demo Application
 
-### Prequequisits
+### Prerequisites
 
 You must have a Cloud Foundry organization on
 [Pivotal Web Services (PWS)](https://run.pivotal.io) with access to the Spring
