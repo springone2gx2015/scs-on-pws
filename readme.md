@@ -2,9 +2,11 @@
 
 ### Prequequisits
 
-You must have a Cloud Foundry organization on [Pivotal Web Services (PWS)](https://run.pivotal.io) with access to the Spring Cloud Services BETA services
-to use this tutorial. Talk to a Pivotal employee at the Pivotal booth if you're
-interested in getting access to Spring Cloud Services.
+You must have a Cloud Foundry organization on
+[Pivotal Web Services (PWS)](https://run.pivotal.io) with access to the Spring
+Cloud Services BETA services to use this tutorial. Talk to a Pivotal employee
+at the Pivotal booth if you're interested in getting access to Spring
+Cloud Services.
 
 ## PWS Setup
 
@@ -26,6 +28,14 @@ Spring Cloud Services BETA.
 
   Replace `YOUR_SCS_ORG` and `YOUR_SCS_SPACE` with the name of the PWS
   organization and space provided to you by a Pivotal employee.
+
+1. Login to PWS using your PWS credentials
+
+Enter the following in a terminal to login to PWS.
+
+```console
+cf login
+```
 
 1. Create the services Fortune Teller will need to run
 
@@ -146,3 +156,40 @@ Click on the **Manage** link below `service-registry` then click on the
 You should see two registered apps: FORTUNES and UI. These are the two apps we
 deployed to Cloud Foundry. If one of these apps is missing, it's likely either
 not configured properly or not running.
+
+## (Optional) Dynamically update Config Server configured
+
+If you have not cloned the [sample configuration repository on GitHub (https://github.com/springone2gx2015/sample-spring-cloud-config)](https://github.com/springone2gx2015/sample-spring-cloud-config), do so now and **point your `config-service` to the cloned
+repository** using the PWS console and Config Service dashboard. (See the
+_Setup the Config Service_ section for more details on how to do this.)
+
+When the `fortune-service` application isn't running or isn't functioning, the
+UI will display the fortune "Your future is unclear." To change this, use your
+favorite Git client to clone your forked `sample-spring-cloud-config`
+repository onto your workstation and edit the `application.yml` file. You
+should see the `fortune.fallbackFortune` property commented out. Uncomment this
+property and change it to your own fallback fortune. Commit the change, and
+push it up to GitHub.
+
+Now stop the `fortune-service` application by running the following from a
+terminal:
+
+```console
+cf stop fortune-service
+```
+
+Now restart the UI application by running:
+
+```console
+cf restart fortune-ui
+```
+
+Refresh the Fortune Teller UI in your browser and you should see your
+customized fallback message.
+
+Start the `fortune-service` application back up to start seeing regular
+fortunes again.
+
+```
+cf start fortune-service
+```
