@@ -138,7 +138,7 @@ necessary clairvoyance to know what your future holds.
 
 ##(Optional) Deploying Fortune Teller applications with STS
 
-1. Open “Boot Dashboard” view via Window -> Show View -> Others… find “Boot Dashboard”. Alternatively, locate and click “Boot Dashboard” button on the main toolbar to open “Boot Dashboard” view. ![Boot Dashboard Button](/images/boot-dash-button.png) 
+1. Open “Boot Dashboard” view via Window -> Show View -> Others… find “Boot Dashboard”. Alternatively, locate and click “Boot Dashboard” button on the main toolbar to open “Boot Dashboard” view. ![Boot Dashboard Button](/images/boot-dash-button.png)
 2. The “Boot Dashboard” view opens up. It should have Fortune Teller applications listed under “Local” run target. ![Boot Dashboard View](/images/boot-dash-view-local.png)
 3. Click on the ‘+’ button in the “Boot Dashboard” view toolbar to Create a new Cloud Foundry connection pointing to the Organization and Space where Fortune Teller application services are about to be deployed. ![Boot Dashboard Add CF Target](/images/boot-dash-add-target.png)
 4. Wizard page pops up prompting to fill in Cloud Foundry credentials and select a space. Ones info is filled in “Finish” button becomes enabled at the bottom. Click it when ready. ![Boot Dashboard Add CF Target Wizard](/images/boot-dash-add-target-wizard.png)
@@ -147,7 +147,7 @@ necessary clairvoyance to know what your future holds.
 7. Perform the step above on manifest.yml file under fortune-teller-ui project.
 8. Multi-select fortune-teller-ui and fortune-teller-fortune-service under “Local” in the “Boot Dashboard” view. ![Boot Dashboard select local apps](/images/boot-dash-select-fortune-teller-apps.png)
 9. Drag And Drop selected fortune-teller-ui and fortune-teller-fortune-service under “Local” onto the created Cloud Foundry target from step 5 above. Both applications should start being deployed on Cloud Foundry. ![Boot Dashboard starting CF apps](/images/boot-dash-starting-fortune-teller.png)
-10. Wait until both apps are running on the Cloud Foundry. ![Boot Dashboard running CF apps](/images/boot-dash-running-fortune-teller.png) 
+10. Wait until both apps are running on the Cloud Foundry. ![Boot Dashboard running CF apps](/images/boot-dash-running-fortune-teller.png)
 11. Double-click on the fortune-ui app under Cloud Foundry run target in the “Boot Dashboard” view. Browser should be opened (either Eclipse’s internal or external browser) showing the Fortune Teller application UI running. ![Boot Dashboard running CF apps](/images/fortune-teller-ui.png)
 
 
@@ -170,7 +170,7 @@ not configured properly or not running.
 
 ## (Optional) Dynamically update Config Server configured
 
-If you have not cloned the [sample configuration repository on GitHub (https://github.com/springone2gx2015/sample-spring-cloud-config)](https://github.com/springone2gx2015/sample-spring-cloud-config), do so now and **point your `config-service` to the cloned
+If you have not forked and cloned the [sample configuration repository on GitHub (https://github.com/springone2gx2015/sample-spring-cloud-config)](https://github.com/springone2gx2015/sample-spring-cloud-config), do so now and **point your `config-service` to the cloned
 repository** using the PWS console and Config Service dashboard. (See the
 _Setup the Config Service_ section for more details on how to do this.)
 
